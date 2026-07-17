@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package Dynamic_Programming;
 
 public class climbingStairs {
     public static int stairs(int n){

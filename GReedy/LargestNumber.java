@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class LargestRectangle {
+public class LargestNumber {
     static int getfirst(int n){
         while(n>10){
             n /=10;

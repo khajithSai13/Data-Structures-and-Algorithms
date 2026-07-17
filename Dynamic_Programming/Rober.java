@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package Dynamic_Programming;
 import java.util.*;
 public class Rober {
     public static void rob(int houses[]){

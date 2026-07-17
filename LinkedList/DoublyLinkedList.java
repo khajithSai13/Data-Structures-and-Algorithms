@@ -1,4 +1,4 @@
-public class DoublyLibkedList {
+public class DoublyLinkedList {
     Node head;
     public class Node{
         int data;
@@ -77,7 +77,7 @@ public class DoublyLibkedList {
         System.out.print("null");
         }
     public static void main(String[] args) {
-        DoublyLibkedList list = new DoublyLibkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
         list.addatStart(1);
         list.addatStart(5);
         list.addatStart(6);

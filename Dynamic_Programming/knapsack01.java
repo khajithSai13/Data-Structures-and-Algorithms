@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package Dynamic_Programming;
 public class knapsack01 {
     public static int knapsack(int[] wts,int[] values,int W){
         int n = wts.length;
