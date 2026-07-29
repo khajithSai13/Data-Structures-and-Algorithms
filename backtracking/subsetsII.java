@@ -11,7 +11,7 @@ class subsetsII{
         for(int i=idx;i<nums.length;i++){
             if(i>idx && nums[i]==nums[i-1]) continue;
             path.add(nums[i]);
-            backtrack(nums, idx+1, path, result);
+            backtrack(nums, i+1, path, result);
             path.remove(path.size()-1);
     }
 }
