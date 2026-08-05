@@ -131,9 +131,66 @@ public static void postorder(Treenode root){
         }
         return c;
     }
+    public static boolean isSymmetric(Treenode root){
+        if(root == null) return true;
+        if(root.left == null && root.right == null) return true;
+        Queue<Treenode> q1 = new LinkedList<>();
+        Queue<Treenode> q2 = new LinkedList<>();
+        q1.add(root.left);
+        q2.add(root.right);
+        while(!q1.isEmpty() && !q2.isEmpty()){
+            Treenode c1 = q1.poll();
+            Treenode c2 = q2.poll();
+            if(c1 !=null && c2!= null){
+                if(c1.data != c2.data) return false;
+            }else if((c1 == null && c2 != null) || (c1!=null && c2 == null)){
+                return false;
+            }else{
+                continue;
+            }
+                q1.add(c1.left);
+                q1.add(c1.right);
+                q2.add(c2.right);
+                q2.add(c2.left);
+        }
+        if(!q1.isEmpty() || !q2.isEmpty()) return false;
+        return true;
+        
+    }
+    public static boolean isSametree(Treenode n1,Treenode n2){
+        if(n1 != null && n2 != null){
+            if(n1.data != n2.data){
+            return false;
+            }
+        }else if((n1 == null && n2!=null)||(n1!=null && n2==null )){
+            return false;
+        }else{
+            return true;
+        }
+        if(! isSametree(n1.left, n2.left)){
+            return false;
+        }
+        if(!isSametree(n1.right, n2.right)){
+            return false;
+        }
+        return true;
+    }
+    public static int maxDepth(Treenode root,int maxDepth){ // everything is perfect and just gonna try a new approach
+        if(root == null) return maxDepth;
+        maxDepth++;
+        int maxDepth1 = Math.max(maxDepth,maxDepth(root.left,maxDepth));
+        int maxDepth2 = Math.max(maxDepth,maxDepth(root.right,maxDepth));
+        return Math.max(maxDepth1,maxDepth2);
+    }
+    public static int maxDepth2(Treenode root){
+        if(root == null)return 0;
+        int m1 = 1+maxDepth2(root.left);
+        int m2 = 1+maxDepth2(root.right);
+        return Math.max(m1,m2);
+    }
     public static void main(String[] args) {
-        Integer[] a = {1,2,3,4,6};
-        Treenode root = buildTree(a);
-        System.out.println(CountNodes(root));
+        Integer[] a = {1,2,5,3,6,7,8,9};
+        //Integer[] b = {1,2,null,5};
+        System.out.println(maxDepth2(buildTree(a)));
      }
 }
