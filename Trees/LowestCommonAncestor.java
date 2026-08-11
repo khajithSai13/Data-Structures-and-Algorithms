@@ -83,11 +83,30 @@ public class LowestCommonAncestor{
         int mm = Math.max(root.data+l,root.data+r);
         return Math.max(mm,root.data);
     }
+    static int GoodNodes = 0;
+    public static int countGoodNodes(Treenode root){
+        if(root == null) return 0;
+        GoodNodes =1;
+        int max = root.data;
+        countHelper(root.left, max);
+        countHelper(root.right, max);
+        return GoodNodes;
+    }
+    public static void countHelper(Treenode root,int max){
+        if(root == null) return;
+        if(root.data >=max){
+            max = root.data;
+            GoodNodes++;
+        }
+        System.out.println(root.data+ " "+GoodNodes+" "+max);
+        countHelper(root.left, max);
+        countHelper(root.right, max);
+    }   
     public static void main(String[] args) {
-        Integer[] a = {10,5,-20,null,null,3,4};
+        Integer[] a = {10,5,15,3,7,12,20,1,4,6,8,11,13,18,25};
         Treenode root = Treenode.buildTree(a);
         // Treenode curr = LCA(root, Treenode.findNode(root, 2), Treenode.findNode(root, 1));
         // Treenode.bfs(curr);
-        System.out.println(maxPathSum(root));
+        System.out.println(countGoodNodes(root));
     }
 }
