@@ -47,6 +47,7 @@ class NumberOfProvinces{
             graph.get(v).add(u);
         }
         int startidx = sc.nextInt();
+        sc.close();
         bfs(startidx,graph);
         System.out.println();
         dfs(graph,new boolean[n],startidx);

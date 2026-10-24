@@ -25,7 +25,7 @@ public class LargestNumber {
         return sb.toString().trim();
     }
     public static String largestNum(int[] nums){
-        int n = nums.length;
+        //int n = nums.length;
         StringBuilder sb = new StringBuilder();
         Integer[] idx = new Integer[nums.length];
         for(int i=0;i<idx.length;i++) idx[i] = i;

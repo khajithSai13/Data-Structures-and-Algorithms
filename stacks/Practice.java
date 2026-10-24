@@ -67,7 +67,7 @@ public class Practice {
         }
     public static int largestRectangle(int[] a){
         Stack<Integer> stack  = new Stack<>();
-        int max = Integer.MIN_VALUE;
+        //int max = Integer.MIN_VALUE;
         int [] res = new int[a.length];
         for(int i=0;i<a.length;i++){
             while(!stack.isEmpty() && a[i]>a[stack.peek()]){

@@ -8,7 +8,7 @@ public class NextPermutation {
     }
     public static void nextPermutation1(int[]a ){//xlose but its not it
         int n = a.length;
-        int x = 0;
+        //int x = 0;
         boolean sw = false;
         for(int i=n-2;i>=0;i--){
             if(a[i]<a[i+1]){
@@ -27,7 +27,7 @@ public class NextPermutation {
     public static void nextPermutation2(int[]a ){//xlose but its not it
         int n = a.length;
         int idx = -1;
-        boolean sw = false;
+        //boolean sw = false;
         for(int i=n-2;i>=0;i--){
             if(a[i]<a[i+1]){
                 idx = i;

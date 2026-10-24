@@ -5,7 +5,7 @@ public class StacksProblems {
     brackets.put('(',')');
     brackets.put('{', '}');
     brackets.put('[',']');
-    int n = s.length();
+    //int n = s.length();
     Stack<Character> stack = new Stack<>();
     for(int i = 0;i<s.length();i++){
         char c = s.charAt(i);
@@ -42,7 +42,7 @@ public class StacksProblems {
     }
     public static int ValidParentheses(String s) {//failed approach
         Stack<Character> stack = new Stack<>();
-        int n = s.length();
+        //int n = s.length();
         int valid =0;
         for(int i=0;i<s.length();i++){
              char ch = s.charAt(i);
@@ -61,8 +61,8 @@ public class StacksProblems {
         }return valid;
     }
     public static int LongestVal(String s){
-        int n = s.length();
-        int[] dp = new int[0];
+        // int n = s.length();
+        // int[] dp = new int[0];
 
         return 0;
     }

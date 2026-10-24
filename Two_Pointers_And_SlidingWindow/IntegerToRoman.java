@@ -1,7 +1,6 @@
 import java.util.*;
-@SuppressWarnings("unused")
 public class IntegerToRoman {
-    public static String inttoRome(int n,HashMap map){
+    public static String inttoRome(int n,HashMap<Integer,String> map){
         StringBuilder sb = new StringBuilder();
         int[] v = {1000,900,500,400,100,90,50,40,10,9,5,4,1};
         int temp = n;

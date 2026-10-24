@@ -173,6 +173,7 @@ class Greedy{
     // }
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
+        sc.close();
         // double[] wts = {10,20,30};
         // double[] profits  = {60,100,120};
         // System.out.println(fractionalKnapsack(wts, profits,50));

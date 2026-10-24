@@ -41,6 +41,7 @@ public class Base {
             list.get(u).add(v);
             list.get(v).add(u);
         }
+        sc.close();
         bfs(0,list);
         boolean[] visited = new boolean[list.size()];
         dfs(0,visited,list);

@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class QueueProbs {
     public static void nonrep(char[] a){

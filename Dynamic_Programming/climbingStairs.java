@@ -10,8 +10,21 @@ public class climbingStairs {
         }
         return dp[n];
     }
+    public static int climb(int n){
+        if(n <=2) return n;
+        int p1= 1;
+        int p2 = 2;
+        n-= 2;
+        while(n > 0){
+            int t = p2;
+            p2 = p1+p2;
+            p1 = t;
+            n--;
+        }
+        return p2;
+    }
     public static void main(String[] args) {
         int n = 10;
-        System.out.println(stairs(n));
+        System.out.println(climb(n));
     }
 }

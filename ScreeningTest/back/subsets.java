@@ -1,7 +1,7 @@
 package ScreeningTest.back;
 import java.util.*;
 public class subsets {
-    public static List<List<Integer>> subsets(int[] a){
+    public static List<List<Integer>> subsets2(int[] a){
         List<List<Integer>> result = new ArrayList<>();
         backtrack(0,a,new ArrayList<>(),result);
         return result;
@@ -18,7 +18,7 @@ public class subsets {
     }
     public static void main(String[] args) {
         int[] a = {1,2,3};
-        List<List<Integer>> result = subsets(a);
+        List<List<Integer>> result = subsets2(a);
         for(List<Integer> lsit : result){
             System.out.println(lsit);
         }

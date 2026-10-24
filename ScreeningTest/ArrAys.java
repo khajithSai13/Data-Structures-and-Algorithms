@@ -1,6 +1,6 @@
 package ScreeningTest;
 
-import java.util.Arrays;
+//import java.util.*;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -96,7 +96,7 @@ public class ArrAys{
         return len;
     }
     public static int maxconsec(int [] a){ // best
-        int n =a.length;
+        //int n =a.length;
         HashSet<Integer> set = new HashSet<>();
         for(int val : a) set.add(val);
         int maxlen = 0;

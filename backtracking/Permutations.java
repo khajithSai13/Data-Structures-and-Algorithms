@@ -1,5 +1,4 @@
 import java.util.*;
-@SuppressWarnings("unused")
 class Permutations{
     public static List<List<Integer>> permutate(int[] nums){
         List<List<Integer>> result = new ArrayList<>();

@@ -1,5 +1,4 @@
-package Trees;
-import java.util.*;
+//import java.util.*;
 class TrappingRainWater{
     public static int max(int [] a){
         int water = 0;

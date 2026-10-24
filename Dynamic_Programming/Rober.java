@@ -1,5 +1,5 @@
 package Dynamic_Programming;
-import java.util.*;
+//import java.util.*;
 public class Rober {
     public static void rob(int houses[]){
         int n = houses.length;

@@ -326,7 +326,7 @@ public static void postorder(Treenode root){
         }
         Treenode left = lcaHelper(root.left, p, q, pf, qf,node);
         Treenode right = lcaHelper(root.right, p, q, pf, qf,node);
-        System.out.println(left.data+" "+ right.data);
+        //System.out.println(left.data+" "+ right.data);
         if(left == null && right == null) return null;
         return (left == null)?right:left;
 
